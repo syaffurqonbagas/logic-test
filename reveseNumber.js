@@ -1,6 +1,11 @@
 function reverseNumber(number) {
-  // Start Code Here
-
+  var temp = 0;
+  while (number) {
+    temp *= 10;
+    temp += number % 10;
+    number = Math.floor(number / 10);
+  }
+  return temp;
 }
 
 console.log(reverseNumber(876)); //output: 678
